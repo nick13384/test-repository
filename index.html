@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Aviasales</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<div class="wrapper">
+
+		<!-- 	Header -->
+		<header class="header">
+			<div class="logo">
+				<img src="img/logo.svg" alt="">
+			</div>
+		</header>
+		<!-- End Header -->
+
+		<!-- Content -->
+		<div class="content">
+
+			<div class="sidebar-left">
+				<div class="filters">
+
+					<div class="currency">
+						<p class="currency__name">Валюта</p>
+						<div class="btn-group">
+							<button class="btn__item active">RUB</button>
+							<button class="btn__item">USD</button>
+							<button class="btn__item">EUR</button>
+						</div>
+					</div>
+
+					<div class="stops-quantity">
+						<p class="currency__name">Количество пересадок</p>
+
+						<div class="check">
+							<input class="stops__checked" type="checkbox" id="check">
+							<label class="stops__label" for="check">Все</label>
+						</div>
+
+						<div class="check">
+							<input class="stops__checked" type="checkbox" id="check1">
+							<label class="stops__label" for="check1">Без пересадок</label>
+						</div>
+
+						<div class="check">
+							<input class="stops__checked" type="checkbox" id="check2">
+							<label class="stops__label" for="check2">1 пересадка</label>
+						</div>
+
+						<div class="check">
+							<input class="stops__checked" type="checkbox" id="check3">
+							<label class="stops__label" for="check3">2 пересадки</label>
+						</div>
+
+						<div class="check">
+							<input class="stops__checked" type="checkbox" id="check4">
+							<label class="stops__label" for="check4">3 пересадки</label>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="sidebar-right">
+
+				<div class="ticket">
+					<div class="ticket-bl-left">
+
+						<div class="ticket__logo">
+							<img src="img/brand.svg" alt="">
+						</div>
+
+							<a href="#" class="ticket__btn">
+								<span class="ticket__btn-text">Купить <br>за 
+									<span class="ticket__price">21 031</span> ₽</span>
+							</a>
+					</div>
+
+					<div class="ticket-bl-right">
+
+						<div class="ticket-info">
+							<span class="ticket-info__time">09:25</span>
+							<p class="ticket-info-union">
+								<span class="ticket-info__origin">VVO</span>, 
+								<span class="ticket-info__origin ticket-info__origin-name">Владивосток</span>
+							</p>
+							<span class="ticket-info__date">9 окт 2018, Пт</span>
+						</div>
+
+						<div class="stops">
+							<p class="stops__amount">1 пересадка</p> 
+							<p class="stops-union">
+								<span class="stops__line"></span>
+								<span class="stops__icon"></span>
+							</p>
+						</div>
+
+						<div class="ticket-info">
+							<span class="ticket-info__time ticket-info__time--right">11:45</span>
+							<p class="ticket-info-union">
+								<span class="ticket-info__origin ticket-info__origin--name">Тель-Авив</span>,
+								<span class="ticket-info__origin">TLV</span>
+							</p>
+							<span class="ticket-info__date">10 окт 2018, Пт</span>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+		<!-- End Content -->
+
+	</div>
+<!-- End Wrapper	 -->
+<script>
+
+// const token = '9ae19398ee379d9db28caf621a0a4303';
+// var myHeaders = new Headers();
+// myHeaders.append('token', token);
+
+// var myInit = { method: 'GET',
+//                headers: myHeaders,
+//                // mode: 'no-cors',
+//                cache: 'default' };
+
+// var myRequest = new Request('https://api.openweathermap.org/data/2.5/weather?q=London', myInit);
+
+// fetch(myRequest)
+//   .then(res => res.json())
+//   .then(data => console.log(data))
+
+fetch('https://frontend-test-assignment-api.abz.agency/api/v1/users')
+.then(res => res.json())
+  .then(data => console.log(data))
+</script>
+
+</body>
+</html>
